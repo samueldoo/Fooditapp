@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './navbar.css';
-import logo from '../../assests/Asset 3@4x 1.svg';
+import logo from '../../assests/Asset 1@4x 3.svg';
 import { BsCart4 } from "react-icons/bs";
 import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar2() {
 
   const navigate = useNavigate();
 
@@ -35,7 +35,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`navbar px-20 flex flex-row justify-between items-center ${isScrolled ? 'scrolled' : ''}`}>
+    <nav className={`navbar bg-opacity-50 backdrop-blur-md px-20 flex flex-row justify-between items-center ${isScrolled ? 'scrolled' : ''}`}>
       <img src={logo} alt="Logo" className='w-[206px] h-[47px]' />
       <ul className={`flex flex-row ${isScrolled ? 'bg-[#1A1A1A26] : bg-white text-black' : 'text-white'} justify-evenly w-[410px] h-[53px] rounded-[26px] items-center font-mont`}>
         <NavLink to='' className={`hover:border-[1px] ${isScrolled ? 'text-black' : 'text-white'}`}>Home</NavLink>
