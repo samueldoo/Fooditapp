@@ -5,6 +5,9 @@ import LOGIN from './pages/login';
 import SIGNUP from './pages/signup';
 import CONFIRMATIONPAGE from './pages/confirmationpage';
 import CART from './pages/cart';
+import FOODNEARBY from './pages/foodnearby';
+import FREQUENTLYORDER from './pages/frequentlyorder';
+import FAVOURITEVENDOR from './pages/favouritevendor'
 
 export default function Router() {
     const routes = useRoutes([
@@ -35,6 +38,24 @@ export default function Router() {
           {
             path: "cart",
             element: <CART />,
+            index: true,
+          },
+
+          {
+            path: "foodnearby",
+            element: <FOODNEARBY />,
+            index: true,
+          },
+
+          {
+            path: "frequentlyorder",
+            element: <FREQUENTLYORDER />,
+            index: true,
+          },
+
+          {
+            path: "favouritevendor",
+            element: <FAVOURITEVENDOR />,
             index: true,
           },
         

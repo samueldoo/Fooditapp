@@ -29,5 +29,7 @@
 
   .nextbg{
     background-image: url('../../assests/view-ready-eat-delicious-meal-go\ 2.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
