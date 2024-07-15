@@ -8,6 +8,7 @@ import CART from './pages/cart';
 import FOODNEARBY from './pages/foodnearby';
 import FREQUENTLYORDER from './pages/frequentlyorder';
 import FAVOURITEVENDOR from './pages/favouritevendor'
+import VENDOR from './pages/vendor'
 
 export default function Router() {
     const routes = useRoutes([
@@ -56,6 +57,12 @@ export default function Router() {
           {
             path: "favouritevendor",
             element: <FAVOURITEVENDOR />,
+            index: true,
+          },
+
+          {
+            path: "vendor",
+            element: <VENDOR />,
             index: true,
           },
         
