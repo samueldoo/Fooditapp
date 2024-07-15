@@ -32,4 +32,22 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .vendorbg{
+    background-image: url('../../assests/Rectangle\ 391.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* .swiper-pagination-bullet {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+    opacity: 1;
+    background: white;
+    border: 2px;
+  } */
   
