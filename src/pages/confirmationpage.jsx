@@ -11,6 +11,10 @@ export default function Confirmationpage() {
     navigate('/signup');
   }
 
+  const handleFoodButton =() => {
+    navigate('/foodnearby');
+  }
+
     const [values, setValues] = useState(['', '', '', '', '', '']);
     const inputRefs = useRef([]);
   
@@ -60,7 +64,7 @@ export default function Confirmationpage() {
                             ))}
                         </div>
 
-                        <button className='w-[456px] h-[60px] rounded-[600px] text-white font-bold font-mont text-[18px] bg-[#F6821F] items-center'>Continue</button>
+                        <button onClick={handleFoodButton} className='w-[456px] h-[60px] rounded-[600px] text-white font-bold font-mont text-[18px] bg-[#F6821F] items-center'>Continue</button>
                     </form>
                 </div>
 

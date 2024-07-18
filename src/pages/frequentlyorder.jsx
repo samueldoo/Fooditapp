@@ -1,20 +1,28 @@
 import React from 'react'
 import NAVBAR from '../layouts/navbar/cartnav';
 import CHOICENAV from '../layouts/navbar/choicenav';
-
+import { useCart } from '../Context/CartContext';
+import food from '../assests/food.svg'
 
 
 
 const foodItems = new Array(15).fill({
     address: '123 Main St',
-    imageUrl: '', // Add your image URL here
+    imageUrl: food,
     price: '#15,000',
     name: 'DELE CANTEEN',
     location: 'Lekki',
     description: 'One Fufu, Peppered Beef & Ponmo',
   });
 
-export default function frequentlyorder() {
+export default function Frequentlyorder() {
+
+  const { addToCart } = useCart();
+
+  const handleAddToCart = () => {
+    addToCart();
+  };
+
   return (
      <div className='nextbg'>
       <NAVBAR />
@@ -56,7 +64,7 @@ export default function frequentlyorder() {
                 {item.description}
               </p>
 
-              <button className='bg-[#F08F00] w-[161px] h-[48px] text-white font-mont font-medium text-[18px] mb-7 rounded-[23px]'>
+              <button onClick={handleAddToCart} className='bg-[#F08F00] w-[161px] h-[48px] text-white font-mont font-medium text-[18px] mb-7 rounded-[23px]'>
                 ADD TO CART
               </button>
             </div>
