@@ -1,26 +1,38 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import vendor from '../assests/vendor.svg'
 
-// Import Swiper styles
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-// import required modules
+
 import { Navigation } from 'swiper/modules';
 import { IoSearchSharp } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Fvendor() {
+    const navigate = useNavigate();
+
+    const handleCardClick = (item) => {
+      navigate('/vendor', { state: { item } });
+    };
+  
+
+ 
+
     const items = Array.from({ length: 15 }, (_, i) => ({
         id: i + 1,
         name: "DELE CANTEEN",
         location: "Lekki",
         description: "3, Kunle Ajayi street Mad..",
-        imgSrc: ""  // Placeholder for image source
+        imgSrc: vendor  
     }));
 
     const renderItems = (slideIndex) => (
         items.slice(slideIndex * 3, (slideIndex + 1) * 3).map((item, index) => (
-            <div key={item.id} className='w-[338px] h-[460px] overflow-hidden flex flex-col justify-center items-center mb-10'>
+            <div key={item.id} onClick={() => handleCardClick(item)} className='w-[338px] h-[460px] overflow-hidden flex flex-col justify-center items-center mb-10'>
                 
                    
                 <img src={item.imgSrc} alt="" className='w-[338px] h-[338px] rounded-[54px]'/>
@@ -38,7 +50,7 @@ export default function Fvendor() {
 
   return (
     <div className='w-[100%] h-[100%] flex flex-col justify-center items-center gap-12'>
-    <h2 className='text-center'>FAVOURITE VENDOR</h2>
+    <h2 className='text-center text-white'>TOP RATED</h2>
     <div className='w-[100%] h-[100%] flex flex-row justify-center px-10'>
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
             {Array.from({ length: Math.ceil(items.length / 3) }, (_, slideIndex) => (

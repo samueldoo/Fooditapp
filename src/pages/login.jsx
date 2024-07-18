@@ -3,6 +3,7 @@ import NAVBAR from '../layouts/navbar/navbar2'
 import IMAGE3 from '../assests/smiley-man-eating-restaurant 3.png'
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Login() {
  
@@ -10,6 +11,10 @@ export default function Login() {
 
   const handleSignupButton =() => {
     navigate('/signup');
+  }
+
+  const handleFoodButton =() => {
+    navigate('/foodnearby');
   }
 
   return (
@@ -37,13 +42,18 @@ export default function Login() {
                                 <input type="password" placeholder='Enter Password' className='border-[1px] mb-5 w-[456px] h-[60px] rounded-[600px] px-3 outline-none'/>
                         </label>
 
-                        <button className='w-[456px] h-[60px] rounded-[600px] text-white font-bold font-mont text-[18px] bg-[#F6821F] items-center'>Login</button>
+                        <div className='flex flex-col justify-center items-center pb-5'>
+                            <NavLink to='' className='text-[#F6821F] font-medium font-mont text-[18px]'>Forgotten Password</NavLink>
+                            <p className='text-black font-medium font-mont text-[18px]'>Don't have an account?<NavLink to='/signup' className=' font-medium font-mont text-[18px] text-[#F6821F]'>Sign Up</NavLink></p>
+                        </div>
+
+                        <button onClick={handleFoodButton} className='w-[456px] h-[60px] rounded-[600px] text-white font-bold font-mont text-[18px] bg-[#F6821F] items-center'>Login</button>
                     </form>
                 </div>
 
 
-                <div className=' bg-white h-[100%] w-[625px] min-h-[100vh] flex justify-center items-center '>
-                    <img src={IMAGE3} alt=""  className='w-[100%] h-[100%]'/>
+                <div className=' bg-white h-[100%] w-[625px] min-h-[0vh] flex justify-center items-center '>
+                    <img src={IMAGE3} alt=""  className='w-[100%] h-[100vh]'/>
                    
                 </div>
             </div>

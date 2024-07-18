@@ -1,12 +1,22 @@
 import React from 'react'
 import { BsCart4 } from "react-icons/bs";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import { useCart } from '../../Context/CartContext';
+import { useNavigate } from'react-router-dom';
 
-export default function vendornav() {
+export default function Vendornav() {
+
+  const navigate = useNavigate();
+
+  const handleSignupButton =() => {
+    navigate('/toprated');
+  }
+
+  const { cartCount } = useCart();
   return (
     <nav className={`navbar bg-opacity-50 backdrop-blur-md px-20 flex flex-row justify-between items-center `}>
       <div className='flex flex-row gap-2 items-center'>
-        <button className='w-[44px] h-[44px] rounded-[26px] bg-white place-content-center px-2'>
+        <button onClick={handleSignupButton} className='w-[44px] h-[44px] rounded-[26px] bg-white place-content-center px-2'>
             <IoMdArrowRoundBack className={`w-[24px] h-[24px]`} />
         </button>
 
@@ -20,7 +30,7 @@ export default function vendornav() {
       <div className={`w-[112px] h-[44px] rounded-[9px] bg-[#F8A307] text-white gap-2 flex flex-row items-center px-3 cursor-pointer`}>
             <p>Cart</p>
           <BsCart4 className={`w-[24px] h-[24px]`} />
-          <p>1</p>
+          <p>{cartCount}</p>
         </div>
     </nav>
   )

@@ -8,8 +8,17 @@ import 'swiper/css/navigation';
 // import required modules
 import { Navigation } from 'swiper/modules';
 import { IoSearchSharp } from "react-icons/io5";
+import { useCart } from '../Context/CartContext';
+import food from '../assests/food.svg'
 
 export default function TopFood() {
+
+    const { addToCart } = useCart();
+
+    const handleAddToCart = () => {
+      addToCart();
+    };
+
     const items = Array.from({ length: 15 }, (_, i) => ({
         id: i + 1,
         name: "DELE CANTEEN",
@@ -17,7 +26,7 @@ export default function TopFood() {
         description: "One Fufu, Peppered Beef & Ponmo",
         price: "#15,000",
         address: "123 Main St",
-        imgSrc: ""  // Placeholder for image source
+        imgSrc: food
     }));
 
     const renderItems = (slideIndex) => (
@@ -33,14 +42,14 @@ export default function TopFood() {
                     <p className='border-[1px] bg-[#D9BD8B] w-[55px] h-[27px] content-center text-center text-white font-mont font-normal text-[17px] rounded-[12px] items-center'>{item.location}</p>
                 </div>
                 <p className='font-mont font-normal text-[16px] text-[#6E6B65]'>{item.description}</p>
-                <button className='bg-[#F08F00] w-[161px] h-[48px] text-white font-mont font-medium text-[18px] mb-7 rounded-[23px]'>ADD TO CART</button>
+                <button onClick={handleAddToCart} className='bg-[#F08F00] w-[161px] h-[48px] text-white font-mont font-medium text-[18px] mb-7 rounded-[23px]'>ADD TO CART</button>
             </div>
         ))
     );
 
     return (
         <div className='w-[100%] h-[100%] flex flex-col justify-center items-center gap-12'>
-            <h2 className='text-center'>TOP FOOD</h2>
+            {/* <h2 className='text-center'>TOP FOOD</h2> */}
             <div className='w-[100%] h-[100%] flex flex-row justify-center px-10'>
                 <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
                     {Array.from({ length: Math.ceil(items.length / 3) }, (_, slideIndex) => (
@@ -52,12 +61,12 @@ export default function TopFood() {
                     ))}
                 </Swiper>
            </div>
-           <div className='w-[385px] h-[79px] rounded-[40px] bg-opacity-50 backdrop-blur-md flex flex-row px-5 justify-center items-center gap-5 mb-10'>
+           {/* <div className='w-[385px] h-[79px] rounded-[40px] bg-opacity-50 backdrop-blur-md flex flex-row px-5 justify-center items-center gap-5 mb-10'>
                 <button className='w-[54px] h-[50px] rounded-[23px] bg-[#E58D3A] place-content-center px-3'>
                     <IoSearchSharp  className='text-white w-[24px] h-[24px]' />
                 </button>
                 <input type="text" placeholder='Search for a Food or vendor' className='w-[282px] h-[48px] bg-transparent outline-none font-mont font-medium text-white text-[18px]'/>
-           </div>
+           </div> */}
     </div>
   )
 }

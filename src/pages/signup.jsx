@@ -10,7 +10,7 @@ export default function Signup() {
     const navigate = useNavigate();
 
     const handleSignupButton =() => {
-      navigate('/confirmationpage');
+      navigate('/numberpage');
     }
 
   return (
