@@ -14,7 +14,7 @@
   background-size: auto;
   background-repeat: repeat no-repeat;
   background-position: 20vw bottom;
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 1C19.5523 3 32.2291 5 51.5 9C104.5 19 200 43 300 65C400 88 500 111 600 102C700 93 800 53 900 30C987.526 5 1085.36 -1 1150 0C1169.54 -1 1180.49 0 1200 1V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V1.98128Z' fill='%23F08F00'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 128' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 21L33 18C82 12 133 14 200 28C267 42 333 64 400 67C467 71 533 57 600 39C667 21 733 0 800 0C867 0 933 21 1000 28C1067 35 1133 28 1167 25L1200 21V128H1167C1133 128 1067 128 1000 128C933 128 867 128 800 128C733 128 667 128 600 128C533 128 467 128 400 128C333 128 267 128 200 128C133 128 67 128 33 128H0V22.332Z' fill='%23f08f00'/></svg>");
 }
 
 @media(max-width:850px) {
@@ -39,7 +39,7 @@
   background-size: auto;
   background-repeat: repeat no-repeat;
   background-position: 20vw bottom;
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200  134' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 98L50 92C100 86 200 74 300 50C400 26 500 -10 600 2C700 14 800 74 900 98C1000 122 1100 110 1150 104L1200 98V134H1150C1100 134 1000 134 900 134C800 134 700 134 600 134C500 134 400 134 300 134C200 134 100 134 50 134H0V98Z' fill='%23FFF5EE'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 128' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 21L33 18C82 12 133 14 200 28C267 42 333 64 400 67C467 71 533 57 600 39C667 21 733 0 800 0C867 0 933 21 1000 28C1067 35 1133 28 1167 25L1200 21V128H1167C1133 128 1067 128 1000 128C933 128 867 128 800 128C733 128 667 128 600 128C533 128 467 128 400 128C333 128 267 128 200 128C133 128 67 128 33 128H0V22.332Z' fill='%23ffffff'/></svg>");
 }
 
 @media(max-width:850px) {
