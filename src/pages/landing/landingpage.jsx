@@ -8,6 +8,7 @@ import RiderVendorSignup from '../../layouts/riderVendorSignup/riderVendorSignup
 import OurVendors from '../../layouts/ourVendors/ourVendors'
 import HomePage from '../../layouts/homePage/homePage'
 import FoodBuddy from '../../layouts/foodBuddy/foodBuddy'
+import FoodBuddyDirectory from '../../layouts/foodBuddyDirectory/foodBuddyDirectory'
 // import OrderQuickFood from '../../layouts/orderQuickFood/orderQuickFood'
 
 
@@ -20,6 +21,7 @@ export default function landingpage() {
        <OurVendors />
        <FoodBuddy />
        <RiderVendorSignup />
+       <FoodBuddyDirectory />
        <Testimonials />
        <PersonalizedWebsiteSection />
        <NewsletterSignup />
